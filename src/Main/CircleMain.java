@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class CircleMain {
 
@@ -26,7 +25,7 @@ public class CircleMain {
         for (int i = 0; i < circles.size(); i++) {
             double radius = circles.get(i).getRadius();
             String color = circles.get(i).getColor();
-            System.out.println("Circle " + i + "- Radius: " + radius + " , color: " + color);
+            System.out.println("Main.Circle " + i + "- Radius: " + radius + " , color: " + color);
         }
     }
 }

@@ -2,7 +2,7 @@ public class TestCylinder {
 
     public static void main(String[] args) {
 
-        // Declare an instance of Circle class called c1.
+        // Declare an instance of Main.Circle class called c1.
         // Construct the instance c1 by invoking the "default" constructor
         // which sets its radius and color to their default value.
 
