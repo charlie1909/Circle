@@ -18,6 +18,10 @@ public class TestShape {
             }
         };
 
+        System.out.println(" Perimeter is " + shape.getPerimeter()
+                + " Color is " + shape.getColor()
+                + " Base area is " + shape.getArea());
+
         assertEquals("Red", shape.getColor());
         assertEquals(true, shape.isFilled());
         assertEquals(50,shape.getArea(), 0);
