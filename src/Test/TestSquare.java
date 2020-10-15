@@ -17,7 +17,7 @@ public class TestSquare {
     }
 
     @Test
-    public void testRectangle(){
+    public void testSquare(){
         s1.setLength(5);
         s1.setWidth(5);
 
