@@ -1,8 +1,8 @@
 public class Square extends Rectangle {
 
-    protected double side;
-
-    public Square(){ }
+    public Square(){
+        super();
+    }
 
     public Square(double side){
         super(side, side);
@@ -13,11 +13,12 @@ public class Square extends Rectangle {
     }
 
     public double getSide() {
-        return side;
+        return getLength();
     }
 
     public void setSide(double side) {
-        this.side = side;
+        setLength(side);
+        setWidth(side);
     }
 
     @Override
@@ -32,8 +33,6 @@ public class Square extends Rectangle {
 
     @Override
     public String toString() {
-        return "Square{" +
-                "side=" + side +
-                '}';
+        return super.toString();
     }
 }
