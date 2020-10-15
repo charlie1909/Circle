@@ -1,55 +1,51 @@
-
-import java.util.Scanner;
-
-public class Circle {
+public class Circle extends Shape{
     //question 3-6
     private double radius;
     private String color;
 
     public Circle(){
-        radius = 1.8;
+        radius = 1.0;
         color = "Red";
     }
 
     public Circle (double radius){
         this.radius = radius;
-        color="Red";
+        color = "Red";
     }
 
-    public Circle(double radius, double value){
+    public Circle (double radius, String colour, boolean filled){
+        super(colour, filled);
         this.radius = radius;
-        color = setColor(value);
     }
-
 
     public double getRadius() {
         return radius;
-    }
-
-    public void getRadiusFromUser(){
-        System.out.println("Please enter a radius");
-        Scanner scanner = new Scanner(System.in);
-        double temp = scanner.nextDouble();
-        setRadius(temp);
     }
 
     public void setRadius(double radius){
         this.radius = radius;
     }
 
-
     public String getColor() {
         return color;
     }
 
+    public void setColour(String color){
+        this.color = color;
+    }
 
+    @Override
     public double getArea(){
-        double area = Math.PI * (radius*radius);
+        double longArea = Math.PI * (radius*radius);
+        double area = Math.round(longArea * 100.0) / 100.0;
         return area;
     }
 
+    @Override
+    public double getPerimeter() {
+        return (2 * Math.PI * getRadius());
+    }
 
-    //Question 1.15-2
     public String setColor(double value){
         switch ((int) value){
             case 0: case 1: case 2: case 3: case 4: case 5:
@@ -74,9 +70,11 @@ public class Circle {
         return color;
     }
 
-    public void setColour(String color){
-        this.color = color;
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ", color='" + color + '\'' +
+                '}';
     }
-
-
 }
