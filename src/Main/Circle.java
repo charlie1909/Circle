@@ -1,7 +1,6 @@
 public class Circle extends Shape{
     //question 3-6
-    private double radius;
-    private String color;
+    protected double radius;
 
     public Circle(){
         radius = 1.0;

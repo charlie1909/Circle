@@ -1,11 +1,11 @@
 public class Square extends Rectangle {
 
-    private double side;
+    protected double side;
 
     public Square(){ }
 
     public Square(double side){
-        this.side = side;
+        super(side, side);
     }
 
     public Square(double side, String color, boolean filled){

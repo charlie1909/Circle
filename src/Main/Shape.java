@@ -1,7 +1,7 @@
 public abstract class Shape {
 
-    private String color;
-    private boolean filled;
+    protected String color;
+    protected boolean filled;
 
     public Shape(){
         color = "Red";
