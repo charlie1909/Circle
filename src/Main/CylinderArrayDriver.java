@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class CylinderArrayDriver {
@@ -20,6 +21,31 @@ public class CylinderArrayDriver {
                 + ", Height is "+ height + ", Color is " + color +
                         ", Base area is " + cylinders[i].getArea()
                 + ", Volume is " + cylinders[i].getVolume());
+            }
+        }else{
+            System.out.println("Max 100 cylinders");
+        }
+
+        System.out.println("Please enter number of cylinders you would like to automatically create");
+        Scanner scanner2 = new Scanner(System.in);
+        int cylinderSize2 = scanner2.nextInt();
+
+        Cylinder[] cylinders2 = new Cylinder[cylinderSize2];
+        if (cylinderSize2 < 100) {
+            for (int i = 0; i < cylinderSize2; i++) {
+                int min = 1;
+                int max = 100;
+                Random rand = new Random();
+                double rad = rand.nextInt(100);
+                double height = rand.nextInt(100);
+                String[] colours = {"Blue", "Red", "Green","Black", "Purple", "Pink", "Cyan", "Brown", "Yellow"};
+                String color = colours[rand.nextInt(colours.length)];
+
+                cylinders2[i] = new Cylinder(rad, height, color);
+                System.out.println("Cylinder number "+ (i+1) + ": Radius is "+ rad
+                        + ", Height is "+ height + ", Color is " + color +
+                        ", Base area is " + cylinders2[i].getArea()
+                        + ", Volume is " + cylinders2[i].getVolume());
             }
         }else{
             System.out.println("Max 100 cylinders");
