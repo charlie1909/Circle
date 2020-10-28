@@ -57,22 +57,19 @@ public class CylinderArrayDriver {
     private static String getColor() {
         System.out.println("Please enter color of cylinder");
         Scanner scanner = new Scanner(System.in);
-        String color = scanner.next();
-        return color;
+        return scanner.next();
     }
 
     private static int getRadius() {
         System.out.println("Please enter radius of cylinder");
         Scanner scanner = new Scanner(System.in);
-        int radius = scanner.nextInt();
-        return radius;
+        return scanner.nextInt();
     }
 
     private static int getHeight() {
         System.out.println("Please enter height of cylinder");
         Scanner scanner = new Scanner(System.in);
-        int radius = scanner.nextInt();
-        return radius;
+        return scanner.nextInt();
     }
 
 }
